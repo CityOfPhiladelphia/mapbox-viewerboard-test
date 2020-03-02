@@ -7,13 +7,18 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "core-js": "^3.6.4",
+    "@fortawesome/vue-fontawesome": "^0.1.9",
+    "@phila/viewerboard": "https://github.com/CityOfPhiladelphia/viewerboard#6e8bf21e278c076e663223ad2a8cadef96bb97ee",
     "vue": "^2.6.11",
     "vuex": "^3.1.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.2.0",
     "@vue/cli-service": "^4.2.0",
+    "babel-runtime": "^6.26.0",
+    "node-sass": "^4.13.0",
+    "sass": "^1.24.2",
+    "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [
