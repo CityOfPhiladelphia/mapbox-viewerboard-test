@@ -23,7 +23,7 @@ viewerboard({
   // customComps,
   initialTiledOverlays: ['fullMarathon'],
   app: {
-    title: 'mapbox viewerboard test',
+    title: 'Mapbox Viewerboard Test',
     tagLine: '',
   },
   // baseConfig: BASE_CONFIG_URL,
@@ -82,4 +82,119 @@ viewerboard({
     marathonToggle: true,
     basemapToggle: true,
   },
+  mbStyle: {
+    version: 8,
+    sources: {
+      pwd: {
+        tiles: [
+          '//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap/MapServer/tile/{z}/{y}/{x}',
+        ],
+        type: 'raster',
+        tileSize: 256,
+      },
+    },
+    layers: [
+      {
+        id: 'pwd',
+        type: 'raster',
+        source: 'pwd',
+      },
+    ]
+  },
+  basemapSources: {
+    pwd: {
+      source: {
+        tiles: [
+          '//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap/MapServer/tile/{z}/{y}/{x}',
+          // '//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap_Labels/MapServer/tile/{z}/{y}/{x}'
+        ],
+        type: 'raster',
+        tileSize: 256,
+      },
+      layer: {
+        id: 'pwd',
+        type: 'raster',
+      },
+    },
+    imagery2019: {
+      source: {
+        tiles: [
+          'https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityImagery_2019_3in/MapServer/tile/{z}/{y}/{x}',
+          // '//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap_Labels/MapServer/tile/{z}/{y}/{x}'
+        ],
+        type: 'raster',
+        tileSize: 256,
+      },
+      layer: {
+        id: 'imagery2019',
+        type: 'raster',
+      },
+    },
+  },
+  basemapLabelSources:{
+    cityBasemapLabels: {
+      source: {
+        tiles: ['//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityBasemap_Labels/MapServer/tile/{z}/{y}/{x}'],
+        type: 'raster',
+        tileSize: 256,
+      },
+      layer: {
+        id: 'cityBasemapLabels',
+        type: 'raster',
+      },
+    },
+    imageryBasemapLabels: {
+      source: {
+        tiles: ['//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/CityImagery_Labels/MapServer/tile/{z}/{y}/{x}'],
+        type: 'raster',
+        tileSize: 256,
+      },
+      layer: {
+        id: 'imageryBasemapLabels',
+        type: 'raster',
+      },
+    },
+  },
+  cameraSource: {
+    'type': 'image',
+    'url': 'https://mapboard-images.s3.amazonaws.com/camera.png',
+    'coordinates': [[-75.163471, 39.953338]],
+  },
+    // parcels: {
+    //   source: {
+    //     tiles: ['//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/PWDParcel_ImageryOverlay/MapServer/tile/{z}/{y}/{x}'],
+    //     type: 'raster',
+    //     tileSize: 256,
+    //   },
+    //   layer: {
+    //     id: 'parcels',
+    //     type: 'raster',
+    //   },
+    // },
+  overlaySources: {
+    fullMarathon: {
+      source: {
+        tiles: ['//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/Full_Marathon_2019/MapServer/tile/{z}/{y}/{x}'],
+        type: 'raster',
+        tileSize: 256,
+      },
+      layer: {
+        // id: 'overlay-fullMarathon',
+        id: 'fullMarathon',
+        type: 'raster',
+      },
+    },
+    halfMarathon: {
+      source: {
+        tiles: ['//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/Half_Marathon_2019/MapServer/tile/{z}/{y}/{x}'],
+        type: 'raster',
+        tileSize: 256,
+      },
+      layer: {
+        // id: 'overlay-halfMarathon',
+        id: 'halfMarathon',
+        type: 'raster',
+      },
+    },
+  }
 });
