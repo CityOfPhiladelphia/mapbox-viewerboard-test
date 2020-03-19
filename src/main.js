@@ -75,11 +75,12 @@ viewerboard({
   // },
   map: {
     type: 'mapbox',
-    center: [-75.188560, 39.982649],
+    // center: [-75.188560, 39.982649],
+    center: [-75.175125, 39.961231],
     minZoom: 11,
     maxZoom: 25,
     shouldInitialize: true,
-    zoom: 13,
+    zoom: 14,
     marathonToggle: true,
     basemapToggle: true,
   },
@@ -100,6 +101,7 @@ viewerboard({
         type: 'raster',
         source: 'pwd',
       },
+
     ]
   },
   basemapSources: {
@@ -197,5 +199,38 @@ viewerboard({
         type: 'raster',
       },
     },
-  }
+  },
+  vectorTilesSource: {
+    type: "vector",
+    tiles: [
+      "https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/PVL_Original/VectorTileServer/tile/{z}/{y}/{x}.pbf"
+    ],
+    maxzoom: 12
+
+
+    // type: "vector",
+    // url: "https://services.arcgis.com/fLeGjb7u4uXqeF9q/ArcGIS/rest/services/PVL_Original/FeatureServer/0?token=hR-TyZT_GLb3PJ1qYZj9VoSV9_L-cbz4ttmedfD9SWibI3Fkv2M4wLZDRiISRnUvc_wfvK_XaXcK0eDHbd-9KLveX3ybWRLeHRgJNtu_CCCOa89Jc5ZKroTOrw-paqIolAR5Gv04CoStZ8qTpCMulf5RrvdlPSq6Clbyv6Buq5Qx97tHP8Z02bbua0K56CBk75x6hNrrd3yo2XDGR5G4LEUxLiffPUqaifGEv4uiaJ763lPgmvNuVkbusyIRI5CL",
+    // url: "https://services.arcgis.com/fLeGjb7u4uXqeF9q/arcgis/rest/services/PVL_Original/FeatureServer",
+    // url: "https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/PVL_Original/VectorTileServer",
+  },
+  vectorTiles: {
+    id: "PVL_Original",
+    type: "line",
+    source: {
+      type: "vector",
+      tiles: [
+        "https://tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/PVL_Original/VectorTileServer/tile/{z}/{y}/{x}.pbf"
+      ],
+      maxzoom: 12
+    },
+    "source-layer":"Street_Centerline_PVL",
+    layout: {
+      "line-cap": "butt",
+      "line-join": "miter"
+    },
+    // paint: {
+    //   "line-color": "rgba(109, 128, 3, 0.5)",
+    //   "line-width": 3
+    // }
+  },
 });
