@@ -11,7 +11,6 @@ if (host === 'atlas-dev.phila.gov.s3-website-us-east-1.amazonaws.com') {
 
 import viewerboard from '@phila/viewerboard/src/main.js';
 
-
 // import MarathonToggleControl from './components/MarathonToggleControl.vue';
 // // import newSiteModal from './components/newSiteModal.vue';
 // const customComps = {
