@@ -19,7 +19,6 @@ import viewerboard from '@phila/viewerboard/src/main.js';
 //   // 'newSiteModal': newSiteModal
 // };
 
-
 viewerboard({
   // customComps,
   initialTiledOverlays: ['fullMarathon'],
