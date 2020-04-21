@@ -75,6 +75,7 @@ viewerboard({
   // },
   map: {
     type: 'mapbox',
+    // type: 'leaflet',
     center: [-75.188560, 39.982649],
     minZoom: 11,
     maxZoom: 25,
