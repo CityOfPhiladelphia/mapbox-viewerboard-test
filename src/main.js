@@ -74,7 +74,7 @@ viewerboard({
   map: {
     type: 'mapbox',
     // type: 'leaflet',
-    center: [-75.188560, 39.982649],
+    center: [-75.174820, 39.961120],
     minZoom: 11,
     maxZoom: 25,
     shouldInitialize: true,
