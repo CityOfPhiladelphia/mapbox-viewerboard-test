@@ -155,22 +155,17 @@ viewerboard({
       },
     },
   },
-  cameraSource: {
-    'type': 'image',
-    'url': 'https://mapboard-images.s3.amazonaws.com/camera.png',
-    'coordinates': [[-75.163471, 39.953338]],
-  },
-    // parcels: {
-    //   source: {
-    //     tiles: ['//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/PWDParcel_ImageryOverlay/MapServer/tile/{z}/{y}/{x}'],
-    //     type: 'raster',
-    //     tileSize: 256,
-    //   },
-    //   layer: {
-    //     id: 'parcels',
-    //     type: 'raster',
-    //   },
-    // },
+  // parcels: {
+  //   source: {
+  //     tiles: ['//tiles.arcgis.com/tiles/fLeGjb7u4uXqeF9q/arcgis/rest/services/PWDParcel_ImageryOverlay/MapServer/tile/{z}/{y}/{x}'],
+  //     type: 'raster',
+  //     tileSize: 256,
+  //   },
+  //   layer: {
+  //     id: 'parcels',
+  //     type: 'raster',
+  //   },
+  // },
   overlaySources: {
     fullMarathon: {
       source: {
